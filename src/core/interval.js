@@ -1,6 +1,7 @@
 export const interval = {};
 export const stopInterval = () => window.clearInterval(interval.current);
 
+const intervalDelay = 500
 let currentInterval = 0;
 
 Object.defineProperty(interval, "current", {
@@ -10,6 +11,6 @@ Object.defineProperty(interval, "current", {
 
   set(value) {
     stopInterval();
-    currentInterval = window.setInterval(value, 1000);
+    currentInterval = window.setInterval(value, intervalDelay);
   },
 });

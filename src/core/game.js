@@ -1,9 +1,11 @@
+import { looseContainer } from "../events/bad";
 import { mapping } from "../mapping";
 import { interval } from "./interval";
 import { handleInterval } from "./intervalHandler";
 import { resetScore } from "./score";
 
 const buttonStart = document.querySelector(".start");
+looseContainer.style.display = "none";
 
 Array.prototype.equals = function (arr2) {
   return (
@@ -14,6 +16,7 @@ Array.prototype.equals = function (arr2) {
 
 export function startGame() {
   resetScore();
+  looseContainer.style.display = "none";
   interval.current = handleInterval;
 }
 
