@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = {
   mode: "production",
   watch: false,
-  entry: ["./src/index.js"],
+  entry: ["./src/index.js", "./src/style/main.scss"],
   output: {
     path: path.resolve("./dist"),
     filename: "main.js",
