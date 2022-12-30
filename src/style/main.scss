@@ -1,0 +1,88 @@
+// SCSS
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap");
+
+.container {
+  background-color: rgb(207, 207, 207);
+  padding: 2rem;
+  border-radius: 9999px;
+  border: 1rem rgb(83, 83, 83) solid;
+  box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.5);
+  .sub-container {
+    display: flex;
+    width: 510px;
+    height: 510px;
+    border-radius: 9999px;
+    overflow: hidden;
+    gap: 0.5rem;
+
+    .inside-container {
+      div {
+        cursor: pointer;
+        height: 250px;
+        width: 250px;
+        border-radius: 1em;
+        transition: 0.4s;
+
+        &:nth-child(2) {
+          margin-top: 0.5rem;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(57, 57, 57);
+}
+
+p {
+  text-transform: uppercase;
+  color: white;
+  position: fixed;
+  top: 1px;
+  line-height: 0;
+  font-size: 3rem;
+  .score {
+    font-weight: bold;
+    color: gold;
+  }
+}
+
+.start {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 9999px;
+  transform: translateY(-125px);
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  padding: 1rem;
+  margin: 1em 0;
+  appearance: none;
+  &:hover {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    background-color: rgb(55, 55, 55);
+    color: white;
+  }
+}
+
+.cursor-none {
+  pointer-events: none;
+}
