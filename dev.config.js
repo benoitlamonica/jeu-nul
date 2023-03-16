@@ -1,5 +1,6 @@
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -53,6 +54,12 @@ module.exports = {
       host: "localhost",
       port: 5000,
       server: { baseDir: ["dist"] },
+    }),
+
+    new CopyPlugin({
+      patterns: [
+        { from: "src/son", to: "son" },
+      ],
     }),
   ],
 };

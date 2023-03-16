@@ -17,6 +17,7 @@ export function handleInterval() {
 
     if (corner.order === nb.value[index]) {
       corner.element.style.opacity = '0.3'
+      corner.sound.play();
       return;
     }
 
@@ -29,6 +30,7 @@ export function handleInterval() {
 mapping.forEach((corner) => {
   corner.element.addEventListener("click", (e) => {
     playerChoice.value = corner.order;
+    corner.sound.play();
   });
 });
 
